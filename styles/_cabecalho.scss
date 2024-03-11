@@ -1,0 +1,91 @@
+.cabecalho {
+    width: 90%;
+    height: 100px;
+    border: 1px solid $preto;
+    border-top: none;
+    @include flexBox(row, space-around, center);
+
+    .logo {
+        text-transform: uppercase;
+        font-size: 40px;
+    }
+
+    .menu {
+        @include flexBox(row, center, center);
+        gap: 0px 50px;
+
+        .menu-item {
+            text-decoration: none;
+            color: $preto;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+
+    .botao {
+        cursor: pointer;
+        background-color: $laranja01;
+        max-width: 200px;
+        width: 95%;
+        height: 48px;
+        border: 2px solid $preto;
+        box-shadow: 3px 3px 0px $preto;
+        color: $preto;
+        font-size: 20px;
+        font-weight: 500;
+
+        
+        &:hover {
+            transition: 0.3s;
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px $preto;
+        }
+    }
+}
+
+@media(max-width: 950px) {
+    .cabecalho .menu .menu-item {
+        font-size: 16px;
+    }
+
+    .cabecalho .botao {
+        max-width: 160px;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 830px) {
+    .cabecalho {
+        @include flexBox(column, center, center);
+        gap: 20px 0px;
+        height: auto;
+        padding: 20px 0px;
+    }
+
+    .cabecalho .menu {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media(max-width: 465px) {
+    .cabecalho .menu {
+        gap: 15px 20px;
+    }
+}
+
+@media(max-width: 370px) {
+    .cabecalho .menu {
+        width: 55%;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media(max-width: 340px) {
+    .cabecalho .menu {
+        width: 63%;
+        flex-wrap: wrap;
+    }
+}

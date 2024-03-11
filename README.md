@@ -1,0 +1,2 @@
+# jazzSchool
+ Landing page
